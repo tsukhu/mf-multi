@@ -10,11 +10,21 @@ window.header.get("./Header").then((module) => {
   });
 });
 
-const App = () => (
+window.vueapp.get("./FullApp").then((m) => {
+  m().default(`#vuecomponent`);
+});
+
+const App = () => {
+  
+  const handleClick = () => {
+    const event = new CustomEvent("incr", { bubbles: true });
+      document.dispatchEvent(event);
+  }
+  return (
   <div>
     <div>Hi there, I'm React from Webpack 5.</div>
-    <button onClick={() => window.addToCart()}>Add To Cart React!</button>
+    <button onClick={() => handleClick()}>Add To Cart React!</button>
   </div>
-);
+)};
 
 ReactDOM.render(<App />, document.getElementById("app"));

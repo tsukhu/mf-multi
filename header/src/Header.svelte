@@ -1,8 +1,11 @@
 <script>
   let count = 0;
-  window.addToCart = () => {
-    count += 1;
-  }
+
+  window.addEventListener('incr', function(e) {
+    if (e.type === 'incr') {
+      count +=1;
+    }
+  })
 </script>
 <style>
   header {
@@ -14,6 +17,6 @@
   }
 </style>
 <header>
-  <div>My Svelte Header III</div>
+  <div>My Svelte Header</div>
   <div>{count}</div>
 </header>
