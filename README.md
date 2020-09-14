@@ -13,4 +13,4 @@ Here are the updates
 - Run `yarn install and yarn start` on the folders `header`, `react-consumer` and `vue-app`
 - Open the host app on 8082 and try it out
 
-
+![Demo](./demo.gif)
