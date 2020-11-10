@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Vue App</h3>
+    <h3>Vue App test</h3>
     <Content />
     <Button @click="emitEvent()" />
   </div>
